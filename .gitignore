@@ -1,0 +1,4 @@
+./Bot.zip
+./stats_backup.json
+./venv/*
+./__pycache__/*
