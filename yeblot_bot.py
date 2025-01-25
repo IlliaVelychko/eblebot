@@ -357,7 +357,9 @@ async def all_stats(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(response)
 
 if __name__ == "__main__":
-    app = ApplicationBuilder().token("8005152106:AAF29-v3TguuPxmNWXcLgGIopgHs12LrQ0U").build()
+    import os
+    TOKEN = os.getenv("BOT_TOKEN")
+    app = ApplicationBuilder().token(TOKEN).build()
 
     # Add error handler
     app.add_error_handler(error_handler)
